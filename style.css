@@ -1,0 +1,125 @@
+/* Скрываем экран, если он не активен */
+/* .screen {
+  display: none;
+} */
+
+/* Отображаем только активный экран */
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.screen.up {
+  margin-top: -100vh;
+}
+
+.screen.down {
+  margin-bottom: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+}
+
+body {
+  background-color: #f67c9f;
+  font-family: "Neue Haas Grotesk Display Pro";
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+}
+
+#btns {
+  width: 400px;
+  height: 400px;
+  margin: 40px auto;
+  position: relative;
+  padding: 8px;
+  border-radius: 0.5rem;
+}
+
+.board {
+  width: 700px;
+  height: 700px;
+  margin: auto;
+  border-radius: 95px;
+  border: 3px solid rgba(255, 251, 255, 0.6);
+  background: radial-gradient(
+    231% 135.8% at 0.9% 2.98%,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(21px);
+}
+
+.hiddenBtn {
+  border: none;
+  color: white;
+  opacity: 0;
+}
+
+.btn {
+  font-size: 24px;
+  /* height: 24.5%;
+  width: 24.5%; */
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5%;
+  margin: 1px;
+  background-color: #f67c9fc7;
+  border: 3px solid #fff;
+}
+
+.board h1 {
+  color: #fff;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.board h2 {
+  color: #fff;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.size-list {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  gap: 30px;
+  list-style-type: none;
+}
+
+.size-btn {
+  font-size: 24px;
+  padding: 20px 60px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 20px;
+  background-color: #f67c9fc7;
+  border: 3px solid #fff;
+}
+
+.timer {
+  color: #fff;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+}

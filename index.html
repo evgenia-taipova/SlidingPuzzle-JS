@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Sliding Puzzle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  </head>
+  <body>
+    <!-- Экран выбора размера -->
+    <div class="screen">
+      <div class="board">
+        <h1>Sliding Puzzle</h1>
+        <h2>Choose size</h2>
+        <ul class="size-list" id="size-list">
+          <li>
+            <button class="size-btn" data-size="3">3x3</button>
+          </li>
+          <li>
+            <button class="size-btn" data-size="4">4x4</button>
+          </li>
+          <li>
+            <button class="size-btn" data-size="5">5x5</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Игровой экран -->
+    <div class="screen">
+      <div class="board">
+        <h1 id="title">Sliding Puzzle</h1>
+        <div class="timer">
+          <label class="timer" id="timer">00:00</label>
+          <!-- <label class="timer">:</label>
+          <label class="timer seconds" id="second">00</label> -->
+        </div>
+        <div id="btns"></div>
+      </div>
+    </div>
+
+    <script src="app.js" type="text/javascript"></script>
+  </body>
+</html>
