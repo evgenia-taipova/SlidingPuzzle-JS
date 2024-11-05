@@ -6,11 +6,9 @@ let size = 4;
 let numberOfBtns = 0;
 let lastBtn = 0;
 let hiddenBtn;
-let minute = document.querySelector("#minute");
-let second = document.querySelector("#second");
 const timerBlock = document.querySelector("#timer");
-let seconds = 0; // Переменная для отсчета секунд
-let minutes = 0; // Переменная для отсчета минут
+let seconds = 0;
+let minutes = 0;
 let timerInterval;
 
 sizeList.addEventListener("click", (event) => {
@@ -19,7 +17,7 @@ sizeList.addEventListener("click", (event) => {
     numberOfBtns = size ** 2;
     lastBtn = numberOfBtns;
     createBoard();
-    shuffle();
+    // shuffle();
     screens[0].classList.add("up");
     timerInterval = setInterval(timer, 1000);
   }
@@ -45,7 +43,6 @@ function createBoard() {
     newBtn.classList.add("btn");
 
     newBtn.addEventListener("click", () => {
-      // console.log(newBtn.id, newBtn.getAttribute("index"));
       moveTile(newBtn);
     });
     btnsContainer.append(newBtn);
@@ -103,14 +100,10 @@ function changeBtn(btn) {
 // }
 function shuffle() {
   const buttons = Array.from(btnsContainer.children);
-
-  // Простое перемешивание: делаем один проход по массиву
   for (let j = buttons.length - 1; j > 0; j--) {
     const randomIndex = Math.floor(Math.random() * (j + 1));
     [buttons[j], buttons[randomIndex]] = [buttons[randomIndex], buttons[j]];
   }
-
-  // Вставляем перемешанные кнопки обратно в контейнер
   buttons.forEach((button, idx) => {
     btnsContainer.appendChild(button);
     button.setAttribute("index", idx + 1);
@@ -121,11 +114,8 @@ function shuffle() {
 }
 
 function controlWin() {
-  // Get all buttons inside btnsContainer
   const buttons = Array.from(btnsContainer.children);
   let isWin = true;
-
-  // Iterate over each button and check if index matches innerHTML
   for (let i = 0; i < buttons.length; i++) {
     const button = buttons[i];
     const index = parseInt(button.getAttribute("index"));

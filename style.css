@@ -1,26 +1,3 @@
-/* Скрываем экран, если он не активен */
-/* .screen {
-  display: none;
-} */
-
-/* Отображаем только активный экран */
-.screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-}
-
-.screen.up {
-  margin-top: -100vh;
-}
-
-.screen.down {
-  margin-bottom: 100vh;
-}
-
 h1 {
   text-align: center;
   font-size: 4rem;
@@ -33,6 +10,19 @@ body {
   overflow: hidden;
   margin: 0;
   text-align: center;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.screen.up {
+  margin-top: -100vh;
 }
 
 #btns {
@@ -58,24 +48,6 @@ body {
   backdrop-filter: blur(21px);
 }
 
-.hiddenBtn {
-  border: none;
-  color: white;
-  opacity: 0;
-}
-
-.btn {
-  font-size: 24px;
-  /* height: 24.5%;
-  width: 24.5%; */
-  cursor: pointer;
-  color: #fff;
-  border-radius: 5%;
-  margin: 1px;
-  background-color: #f67c9fc7;
-  border: 3px solid #fff;
-}
-
 .board h1 {
   color: #fff;
   font-size: 60px;
@@ -92,6 +64,22 @@ body {
   line-height: normal;
   text-align: center;
   margin-top: 100px;
+}
+
+.hiddenBtn {
+  border: none;
+  color: white;
+  opacity: 0;
+}
+
+.btn {
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5%;
+  margin: 1px;
+  background-color: #f67c9fc7;
+  border: 3px solid #fff;
 }
 
 .size-list {
